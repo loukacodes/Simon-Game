@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+/*
+	red: rgb(200, 34, 30);
+	blue: rgb(28, 75, 131);
+	yellow: rgb(200, 134, 30);
+	green: rgb(23, 158, 32);
+*/
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Exo 2', sans-serif;
+	background: #304352;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #d7d2cc, #304352);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #d7d2cc, #304352); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	max-height: 100vh;
+}
+
+.wrapper, .wrapper-clone {
+	width: 400px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 5em auto;
+}
+
+.wrapper-clone {
+	position: relative;
+	top: -42.5em;
+	z-index: -1;
+}
+
+.wrapper-clone>.top-left {
+	background: rgba(200, 34, 30, 0.6);
+}
+
+.wrapper-clone>.top-right {
+	background: rgba(28, 75, 131, 0.6);
+}
+
+.wrapper-clone>.bottom-left {
+	background: rgba(23, 158, 32, 0.6);
+}
+
+.wrapper-clone>.bottom-right {
+	background: rgba(200, 134, 30, 0.6);
+}
+
+.piece {
+	width: 200px;
+	height: 200px;
+}
+
+.piece:hover, .piece:active {
+	cursor: pointer;
+}
+
+.top-left {
+	border-top-left-radius: 100%;
+	background: rgb(200, 34, 30);
+	border-top: 20px solid #111;
+	border-left: 20px solid #111;
+	border-right: 10px solid #111;
+	border-bottom: 10px solid #111;
+}
+
+.top-right {
+	border-top-right-radius: 100%;
+	background: rgb(28, 75, 131);
+	border-top: 20px solid #111;
+	border-right: 20px solid #111;
+	border-left: 10px solid #111;
+	border-bottom: 10px solid #111;
+}
+
+.bottom-right {
+	border-bottom-right-radius: 100%;
+	background: rgb(200, 134, 30);
+	border-bottom: 20px solid #111;
+	border-left: 10px solid #111;
+	border-right: 20px solid #111;
+	border-top: 10px solid #111;
+}
+
+.bottom-left {
+	border-bottom-left-radius: 100%;
+	background: rgb(23, 158, 32);
+	border-bottom: 20px solid #111;
+	border-right: 10px solid #111;
+	border-left: 20px solid #111;
+	border-top: 10px solid #111;
+}
+
+.control {
+	width: 200px;
+	height: 200px;
+	border-radius: 100%;
+	z-index: 333;
+	background: #eee;
+	position: relative;
+	bottom: 300px;
+	left: 100px;
+	border: 10px solid #111;
+}
+
+#title {
+	text-align: center;
+}
+
+.button {
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+	border: 3px solid #111;
+	box-shadow: 1px 1px 1px #111;
+}
+
+.control-button {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	font-size: 0.75em;
+	text-align: center;
+}
+
+#counter {
+	width: 45px;
+	height: 30px;
+	background: #111;
+	border: 3px solid #111;
+	background: #870003;
+	border-radius: 5px;
+	position: relative;
+	top: 5px;
+	left: 10px;
+}
+
+#counter-content {
+	/*color: #C61D22;*/
+	font-size: 2em;
+	position: relative;
+	top: -4px;
+	font-family: 'Orbitron', sans-serif;
+}
+
+#counter-content.inactive {
+	color: #680003;
+}
+
+#counter-content.active {
+	color: #C8221E;
+}
+#counter h5 {
+	position: relative;
+	top: -17px;
+	left: 2px;
+}
+
+#start {
+	background: red;
+	margin: 10px;
+	position: relative;
+	left: 7px;
+}
+
+#strict-mode {
+	background: yellow;
+	margin: 10px;
+}
+
+#red-light {
+	width: 8px;
+	height: 8px;
+	border: 2px solid #111;
+	border-radius: 100%;
+	position: relative;
+	top: -40px;
+	left: 146px;
+}
+#red-light.active {
+	background: #C8221E;
+}
+
+
+#start:hover, #strict-mode:hover {
+	cursor: pointer;
+}
+
+#start:active, #strict-mode:active {
+	box-shadow: inset 0 1px 0 #111;
+}
+
+.control-button h5 {
+	position: relative;
+	right: 5px;
+	top: 7px;
+}
+
+.on-off {
+	display: flex;
+	justify-content: center;
+	font-size: 0.75em;
+}
+
+.on-off h5 {
+	position: relative;
+	top: 8px;
+}
+
+.switch {
+	position: relative;
+	top: 20px;
+	width: 40px;
+	height: 20px;
+	margin: 0 3px;
+}
+
+.switch input {
+	display: none;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top:0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: #111;
+	-webkit-transition: .02s;
+	transition: .02s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 16px;
+	width: 16px;
+	left: 2px;
+	bottom: 2px;
+	background: #1D4A83;
+	-webkit-transition: .02s;
+	transition: .02s;
+}
+
+input:checked + .slider {
+	background: #111;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #111;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(20px);
+	-ms-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+.unclickable {
+	pointer-events: none;
+  	cursor: default;
+}
+
+.clicked {
+	background-color: transparent;
+}
+
+.blink {
+	color: rgb(200, 34, 30);
+}
+
+#message {
+	font-size: 5em;
+	text-align: center;
+	margin: auto;
+}

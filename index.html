@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SIMON GAME</title>
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+<body>
+	<div id="message"></div>
+  <div class="wrapper" id="main">
+	<div class="piece top-left" id="1"></div>
+	<div class="piece top-right" id="2"></div>
+	<div class="piece bottom-left" id="4"></div>
+	<div class="piece bottom-right" id="3"></div>
+
+		<div class="control">
+		  <h1 id="title">Simon</h1>
+		    <div class="control-button">
+			  <div id="counter">
+				<div id="counter-content" class="inactive">--</div>
+				  <h5>COUNT</h5>
+			  </div>
+			  <div id="start" class="button unclickable"><h5>START</h5></div>
+			  <div id="strict-mode" class="button unclickable"><h5>STRICT</h5></div>
+			</div>
+			<div id="red-light" class="inactive"></div>
+			<div class="on-off">
+			  <h5>OFF</h5>
+				<label class="switch">
+				  <input type="checkbox" id="switch-button">
+				  <div class="slider"></div>
+				</label>
+			  <h5>ON</h5>
+			</div>
+		</div>
+  </div>
+
+  <div class="wrapper-clone">
+  	<div class="piece top-left"></div>
+		<div class="piece top-right"></div>
+		<div class="piece bottom-left"></div>
+		<div class="piece bottom-right"></div>
+
+  </div>
+
+<script type="text/javascript" src="JS/jquery-3.2.1.min.js"></script>
+<script type="text/javscript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script type="text/javascript" src="JS/main.js"></script>
+</body>
+</html>

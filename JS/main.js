@@ -1,23 +1,8 @@
 /*================================================
-	CLASSIC SIMON GAME CREATED FOR FREECODECAMP
-	FRONT END PROJECT.
+CLASSIC SIMON GAME CREATED FOR FREECODECAMP
+FRONT END PROJECT.
 ==================================================*/
 
-/*==================================================
-Process update:
-- counter content must be return to its initial state
-when player click off during the game
-- add more speed when player reachs certain level
-- add strict mode
-- limit the number of level, 20 is maximum
-- adjust the timer each time go to the next stage
-//After finished all these things, give yourself a big
-round of applause!
-
-Bravo! you reach the end of the path to become a
-front end developer. Now you can call yourself a
-front end developer!!!
-====================================================*/
 
 /*Initial State*/
 var playerSequence = []; //place holder for what pad user clicked
